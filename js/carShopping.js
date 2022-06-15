@@ -24,7 +24,177 @@ function generatorProducts (array) {
     for (let i = 0; i < array.length; i++) {
         html += `<div class="card-producto">
         <div class="img-producto">
-            <img src="${array[i].img}" alt="...">
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#productoDetalle">
+                <img src="${array[i].img}" alt="...">
+            </button>
+            <div class="modal fade" id="productoDetalle" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Detalles del producto</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <div class="width-100"> <!--Aqui empieza descripción del producto-->
+                <div class="width-80p">
+                    <div class="row caja-conte">
+                        <div class="col-6">
+                            <div class="fondo-rosa">
+                                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                                    <div class="carousel-indicators">
+                                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                      <div class="carousel-item active">
+                                        <img src="${array[i].img}" class="d-block w-100" alt="...">
+                                      </div>
+                                      <div class="carousel-item">
+                                        <img src="../img/buzo-rojo-detras.png" class="d-block w-100" alt="...">
+                                      </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                      <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                      <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="data-product col-6">
+                            <div class="volver-product mb-3">
+                                <i class="fa-solid fa-arrow-left"></i>
+                                <p>Academlo - Tienda oficial</p>
+                            </div>
+                            <h2 class="mb-4">Playera negra- Logo Blanco</h2>
+                            <h1 class="mb-4"><strong>$265.00</strong></h1>
+                            <p class="mb-5">Hoodies oficiales de Academlo</p>
+                            <h4><strong>Colores</strong></h4>
+                            <div class="row">
+                                <div class="col-2 contec-img-peque">
+                                    <img class="img-peque" src="../img/buzo-rojo-adelante.png" alt="">
+                                </div>
+                                <div class="col-2 contec-img-peque">
+                                    <img class="img-peque" src="../img/buzo-azul-adelante.png" alt="">
+                                </div>
+                            </div>
+                            <h4 class="mt-5"><strong>Tallas</strong></h4>
+                            <div>
+                                <div class="guia-tallas">
+                                    <i class="fa-regular fa-circle-question"></i>
+                                    <p>Guía de tallas</p>
+                                </div>
+                                <div class="tallas">
+                                    <button class="col-2">S</button>
+                                    <button class="col-2">M</button>
+                                    <button class="col-2">L</button>
+                                    <button class="col-2">XL</button>
+                                    <button class="col-2">2XL</button>
+                                    <button class="col-2">3XL</button>
+                                </div>
+                                <div class="content-añadir-carrito">
+                                    <button class="añadir-carrito">Añadir al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!--Aqui termina descripción del producto-->
+            <div class="width-100 mt-5"> <!--Aqui empieza productos relacionados-->
+                <div class="width-80p">
+                    <h3 class="title-productos-ralacionados">Productos relacionados</h3>
+                    <div class="product-recomendados">
+                        <div class="card-producto">
+                            <div class="img-producto">
+                                <img src="../img/buzo-azul-adelante.png" alt="...">
+                            </div>
+                            <div class="info-producto-card">
+                                <h5 class="card-title">Sudadera gris-logo negro</h5>
+                            <div class="colors-productos">
+                                <div class="color1"></div>
+                                <div class="color2"></div>
+                            </div>
+                            <h4 class="precio-productos">$265.00</h4>
+                            </div>
+                        </div>
+                        <div class="card-producto">
+                            <div class="img-producto">
+                                <img src="../img/buzo-azul-adelante.png" alt="...">
+                            </div>
+                            <div class="info-producto-card">
+                                <h5 class="card-title">Sudadera gris-logo negro</h5>
+                            <div class="colors-productos">
+                                <div class="color1"></div>
+                                <div class="color2"></div>
+                            </div>
+                            <h4 class="precio-productos">$265.00</h4>
+                            </div>
+                        </div>
+                        <div class="card-producto">
+                            <div class="img-producto">
+                                <img src="../img/buzo-azul-adelante.png" alt="...">
+                            </div>
+                            <div class="info-producto-card">
+                                <h5 class="card-title">Sudadera gris-logo negro</h5>
+                            <div class="colors-productos">
+                                <div class="color1"></div>
+                                <div class="color2"></div>
+                            </div>
+                            <h4 class="precio-productos">$265.00</h4>
+                            </div>
+                        </div>
+                        <div class="card-producto">
+                            <div class="img-producto">
+                                <img src="../img/buzo-azul-adelante.png" alt="...">
+                            </div>
+                            <div class="info-producto-card">
+                                <h5 class="card-title">Sudadera gris-logo negro</h5>
+                            <div class="colors-productos">
+                                <div class="color1"></div>
+                                <div class="color2"></div>
+                            </div>
+                            <h4 class="precio-productos">$265.00</h4>
+                            </div>
+                        </div>
+                        <div class="card-producto">
+                            <div class="img-producto">
+                                <img src="../img/buzo-azul-adelante.png" alt="...">
+                            </div>
+                            <div class="info-producto-card">
+                                <h5 class="card-title">Sudadera gris-logo negro</h5>
+                            <div class="colors-productos">
+                                <div class="color1"></div>
+                                <div class="color2"></div>
+                            </div>
+                            <h4 class="precio-productos">$265.00</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!--Aqui empieza productos relacionados-->
+            <div class="width-100 mt-5">
+                <div class="width-80p">
+                    <form class="email-contacto">
+                        <h3>Mantente en contacto</h3>
+                        <label for="exampleInputEmail1" class="form-label"><p>¡Suscríbete para recibir noticias de productos y descuentos especiales!</p></label>
+                        <div class="mb-3 label-contacto">
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Escribe tu email">
+                          <button type="submit" class="btn btn-primary">Suscríbete</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <a class="btn colorbutton" onclick="getProductToCarShopping(${array[i].id})" type="submit">Añadir al carrito</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="info-producto-card">
             <h5 class="card-title">${array[i].name}</h5>
