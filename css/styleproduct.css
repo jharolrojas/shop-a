@@ -214,3 +214,14 @@
     width: 25%;
     /* padding: 0.5rem 5rem; */
 }
+
+/* clases para footer */
+footer{
+    background-color: #eb4a5a;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.p-footer{
+    color: white !important;
+}
