@@ -22,23 +22,22 @@ let dataShopingCar = JSON.parse(localStorage.getItem('products')) || [];
 function generatorProducts (array) {
     let html ='';
     for (let i = 0; i < array.length; i++) {
-        html += `
-                <div class="card-producto"  id="card-producto">
-                <div class="img-producto">
-                    <img src="${array[i].img}" alt="...">
-                </div>
-                <div class="info-producto-card">
-                    <h3 class="card-title">${array[i].name}</h3>
-                <div class="colors-productos">
-                    <div class="color1"></div>
-                    <div class="color2"></div>
-                </div>
-                <h4 class="precio-productos">$${array[i].price}</h4>
-                </div>
-                <div class="button">
-                    <button onclick="getProductToCarShopping(${array[i].id})" type="submit" >Agregar</button>
-                </div>
-                </div>`
+        html += `<div class="card-producto">
+        <div class="img-producto">
+            <img src="${array[i].img}" alt="...">
+        </div>
+        <div class="info-producto-card">
+            <h5 class="card-title">${array[i].name}</h5>
+        <div class="colors-productos">
+            <div class="color1"></div>
+            <div class="color2"></div>
+        </div>
+        <div class="precio-y-icono-bag">
+            <a onclick="getProductToCarShopping(${array[i].id})" type="submit"><i class="fa-solid fa-bag-shopping"></i></a>
+            <h4 class="precio-productos">$ ${array[i].price}</h4>
+        </div>
+        </div>     
+    </div>`;
         
     }
     let container = document.getElementById('containerShopProduct');
@@ -72,24 +71,25 @@ function getProductToCarShopping(idProduct) {
 }
 function generadorHtmlShoppingCar(dataShopingCar) {
     let htmlProduct = '';
+
     for (let i = 0; i < dataShopingCar.length; i++) {
         htmlProduct += `<div class="productShow">
         <div class="img-producto">
-            <img src="img/buzo-azul-adelante.png" alt="...">
+            <img src="${dataShopingCar[i].img}" alt="...">
         </div>
         <div class="data">
-            <h3>${dataShopingCar[i].name}</h3>
-            <h3 >$${dataShopingCar[i].price}</h3>
+            <h5 class="card-title">${dataShopingCar[i].name}</h5>
+            <h3>$${dataShopingCar[i].price}</h3>
         </div>    
-    </div>
-    `
+    </div>`;
+
     sumPrice(dataShopingCar);
     }
     // generatorProducts(dataShopingCar)
     const container = document.getElementById('carShopping');
     container.innerHTML = htmlProduct;
-    
 }
+
 function sumPrice(dataShopingCar) {
     let price = 0;
     for (let i = 0; i < dataShopingCar.length; i++) {
@@ -99,10 +99,10 @@ function sumPrice(dataShopingCar) {
     let html = `<h4>Precio Total : <b>$${price}</b></h4>
     `
     let button = `        <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Launch demo modal
-      </button>`
-      
+    <button type="button" class="btn colorbutton" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Comprar
+      </button>
+      `
       
     let container = document.getElementById('sumPrice');
     container.innerHTML = html + button;

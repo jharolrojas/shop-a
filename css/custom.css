@@ -33,15 +33,19 @@ body{
 /* ccontiene la imagen grande del logo de academlo con un color de fondo */
 .containerHeroImage{
     height: auto;
-    justify-content: center;
+    width: 100%;
     background-color: #EB4A5A;
 }
-.containerHeroImage img{
-    width: 150px;
-    height: 150px;
-   margin: 15% 0;
+.containerHeroImage div{
+    width: 20%;
+    margin: 0rem auto;
+}
+.containerHeroImage div img{
+    width: 100%;
 }
 .containertitleh2{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     color: #434343;
 
 }
@@ -110,7 +114,8 @@ aside{
 }
 .data{
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
     padding: 10px;
 }
 .productShow .img-producto{
