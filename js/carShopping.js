@@ -100,7 +100,10 @@ function sumPrice(dataShopingCar) {
     let button = `        <!-- Button trigger modal -->
     <button type="button" class="btn colorbutton" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Comprar
-      </button>
+    </button>
+    <button type="button" onclick="remuve()" class="btn btn-secondary" data-bs-toggle="modal">
+        Vaciar Carrito
+    </button>
       `
       
     let container = document.getElementById('sumPrice');
